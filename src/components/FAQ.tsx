@@ -61,17 +61,17 @@ const FAQ: React.FC = () => {
   return (
     <section id="faq" className="py-20 bg-gradient-to-br from-black to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6">
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
             Got questions? We've got answers! Here are the most commonly asked questions 
             about HACKFINITY 2025. Don't see your question? Feel free to contact us.
           </p>
           
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-4 sm:px-0">
             {categories.map((category) => (
               <button
                 key={category}
@@ -79,7 +79,7 @@ const FAQ: React.FC = () => {
                   setSelectedCategory(category);
                   setOpenIndex(null);
                 }}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-3 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-base ${
                   selectedCategory === category
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
                     : 'bg-black/50 text-gray-300 border border-orange-500/30 hover:bg-orange-500/20 hover:text-orange-300'
@@ -90,7 +90,7 @@ const FAQ: React.FC = () => {
             ))}
           </div>
           
-          <div className="text-center text-gray-400 text-sm">
+          <div className="text-center text-gray-400 text-xs sm:text-sm">
             Showing {filteredFAQs.length} question{filteredFAQs.length !== 1 ? 's' : ''} 
             {selectedCategory !== 'All' && ` in ${selectedCategory}`}
           </div>
@@ -103,33 +103,33 @@ const FAQ: React.FC = () => {
               className="bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-500/50"
             >
               <button
-                className="w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none group"
+                className="w-full px-4 py-4 sm:px-8 sm:py-6 text-left flex items-center justify-between focus:outline-none group"
                 onClick={() => toggleFAQ(index)}
               >
-                <div className="flex items-center space-x-4">
-                  <div className="bg-orange-500/20 rounded-full p-2 group-hover:bg-orange-500/30 transition-colors">
-                    <HelpCircle className="w-5 h-5 text-orange-500" />
+                <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                  <div className="bg-orange-500/20 rounded-full p-2 group-hover:bg-orange-500/30 transition-colors flex-shrink-0">
+                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <div className="text-xs text-orange-400 font-medium mb-1">{faq.category}</div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-orange-300 transition-colors">
+                    <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-orange-300 transition-colors leading-tight">
                       {faq.question}
                     </h3>
                   </div>
                 </div>
-                <div className="text-orange-500 group-hover:text-orange-400 transition-colors">
+                <div className="text-orange-500 group-hover:text-orange-400 transition-colors flex-shrink-0 ml-2">
                   {openIndex === index ? (
-                    <ChevronUp className="w-6 h-6" />
+                    <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />
                   ) : (
-                    <ChevronDown className="w-6 h-6" />
+                    <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6" />
                   )}
                 </div>
               </button>
               
               {openIndex === index && (
-                <div className="px-8 pb-6">
-                  <div className="pl-16">
-                    <p className="text-gray-300 leading-relaxed">
+                <div className="px-4 pb-4 sm:px-8 sm:pb-6">
+                  <div className="pl-8 sm:pl-16">
+                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                       {faq.answer}
                     </p>
                   </div>
@@ -139,19 +139,18 @@ const FAQ: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-orange-500/10 border border-orange-500/30 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
-          <p className="text-gray-300 mb-6">
+        <div className="mt-12 sm:mt-16 text-center bg-orange-500/10 border border-orange-500/30 rounded-2xl p-6 sm:p-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Still have questions?</h3>
+          <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base px-4 sm:px-0">
             Can't find the answer you're looking for? Our team is here to help!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button 
               onClick={() => window.location.href = 'mailto:director@btibangalore.com?subject=Support Request - HACKFINITY 2025&body=Hi, I need help with...'}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-full font-semibold transition-colors text-sm sm:text-base"
             >
               Contact Support
             </button>
-
           </div>
         </div>
       </div>

@@ -124,18 +124,18 @@ const Challenges: React.FC = () => {
   return (
     <section id="challenges" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 sm:mb-6">
             Challenge <span className="text-orange-500">Themes</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0">
             Choose from five exciting themes designed to challenge your creativity, 
             technical skills, and problem-solving abilities. Each theme offers unique opportunities 
             to make a real-world impact in areas you care about.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {challenges.map((challenge) => (
             <div key={challenge.id} className="group">
               {/* Compact Title Card */}
@@ -211,24 +211,24 @@ const Challenges: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-black rounded-3xl p-8 lg:p-12 text-center">
-          <h3 className="text-3xl font-bold text-white mb-6">Evaluation Criteria</h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Innovation</h4>
-              <p className="text-gray-300 text-sm">Creativity and uniqueness of the solution</p>
+        <div className="bg-black rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Evaluation Criteria</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Innovation</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Creativity and uniqueness of the solution</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Technical Implementation</h4>
-              <p className="text-gray-300 text-sm">Code quality and technical excellence</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Technical Implementation</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Code quality and technical excellence</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Impact</h4>
-              <p className="text-gray-300 text-sm">Real-world applicability and potential impact</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Impact</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Real-world applicability and potential impact</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Presentation</h4>
-              <p className="text-gray-300 text-sm">Clear demonstration and pitch quality</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Presentation</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Clear demonstration and pitch quality</p>
             </div>
           </div>
         </div>

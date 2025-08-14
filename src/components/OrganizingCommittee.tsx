@@ -66,47 +66,47 @@ const OrganizingCommittee: React.FC = () => {
   return (
     <section id="organizing-committee" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6">
             Organizing <span className="text-orange-500">Committee</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0">
             Meet the dedicated organizing committee behind BTI Ignite Incubation Council, driving innovation 
             and excellence in startup incubation and entrepreneurship development.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {committee.map((member, index) => (
             <div
               key={index}
               className={`bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 ${member.shadowColor} shadow-2xl group`}
             >
-              <div className="flex items-start space-x-6">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
                 <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
                   <img 
                     src={member.photo} 
                     alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-orange-500/30 shadow-lg"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-orange-500/30 shadow-lg"
                   />
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                  <div className="text-orange-500 font-semibold text-lg mb-1">{member.position}</div>
-                  <div className="text-gray-400 text-sm mb-4 font-medium">{member.organization}</div>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{member.name}</h3>
+                  <div className="text-orange-500 font-semibold text-base sm:text-lg mb-1">{member.position}</div>
+                  <div className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 font-medium">{member.organization}</div>
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">{member.description}</p>
                   
                   {/* LinkedIn icon for Dr. Prabhakar Sekar */}
                   {member.linkedin && (
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center justify-center sm:justify-start space-x-2">
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                        className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg transition-colors text-xs sm:text-sm"
                       >
-                        <Linkedin className="w-4 h-4" />
+                        <Linkedin className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span>Connect on LinkedIn</span>
                       </a>
                     </div>
@@ -117,9 +117,9 @@ const OrganizingCommittee: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8">
-          <h3 className="text-3xl font-bold text-white mb-6">Driving Excellence Together</h3>
-          <p className="text-gray-300 text-lg max-w-4xl mx-auto">
+        <div className="text-center mt-12 sm:mt-16 bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 sm:p-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Driving Excellence Together</h3>
+          <p className="text-gray-300 text-base sm:text-lg max-w-4xl mx-auto px-4 sm:px-0">
             Our organizing committee combines decades of experience in technology, finance, operations, and entrepreneurship 
             to create a thriving ecosystem for startups and innovators. Together, they guide BTI Ignite Incubation Council 
             towards its mission of fostering the next generation of successful entrepreneurs.
@@ -127,17 +127,17 @@ const OrganizingCommittee: React.FC = () => {
         </div>
 
         {/* Hackathon Crew Section */}
-        <div className="mt-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+        <div className="mt-16 sm:mt-20">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6">
               Hackathon <span className="text-orange-500">Crew</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0">
               Meet our dedicated hackathon crew of 9 talented members who make this event possible through their expertise and passion.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 name: "Jeelan Basha",

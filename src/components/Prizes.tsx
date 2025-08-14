@@ -34,20 +34,20 @@ const Prizes: React.FC = () => {
   return (
     <section id="prizes" className="py-20 bg-gradient-to-br from-black to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6">
             Prize <span className="text-orange-500">Pool</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0">
             Compete for amazing prizes worth ₹18,000 in total! Winners will receive cash prizes,
             certificates, and exclusive opportunities to kickstart their tech careers.
           </p>
-          <div className="bg-orange-500/20 border border-orange-500 rounded-lg p-4 inline-block">
-            <p className="text-orange-300 font-semibold text-lg">Total Prize Pool: ₹18,000</p>
+          <div className="bg-orange-500/20 border border-orange-500 rounded-lg p-3 sm:p-4 inline-block mx-4 sm:mx-0">
+            <p className="text-orange-300 font-semibold text-base sm:text-lg">Total Prize Pool: ₹18,000</p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {prizes.map((prize, index) => (
             <div
               key={index}
@@ -76,24 +76,24 @@ const Prizes: React.FC = () => {
 
 
 
-        <div className="text-center bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8">
-          <h3 className="text-3xl font-bold text-white mb-6">Beyond Monetary Prizes</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Mentorship</h4>
-              <p className="text-gray-300 text-sm">One-on-one guidance from industry experts</p>
+        <div className="text-center bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 sm:p-8">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Beyond Monetary Prizes</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Mentorship</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">One-on-one guidance from industry experts</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Internships</h4>
-              <p className="text-gray-300 text-sm">Exclusive internship opportunities with partner companies</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Internships</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Exclusive internship opportunities with partner companies</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Networking</h4>
-              <p className="text-gray-300 text-sm">Connect with like-minded developers and entrepreneurs</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Networking</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Connect with like-minded developers and entrepreneurs</p>
             </div>
-            <div className="bg-orange-500/20 rounded-lg p-6 border border-orange-500/30">
-              <h4 className="text-lg font-semibold text-orange-500 mb-2">Recognition</h4>
-              <p className="text-gray-300 text-sm">Industry recognition and certificate of achievement</p>
+            <div className="bg-orange-500/20 rounded-lg p-4 sm:p-6 border border-orange-500/30">
+              <h4 className="text-base sm:text-lg font-semibold text-orange-500 mb-2">Recognition</h4>
+              <p className="text-gray-300 text-xs sm:text-sm">Industry recognition and certificate of achievement</p>
             </div>
           </div>
         </div>
