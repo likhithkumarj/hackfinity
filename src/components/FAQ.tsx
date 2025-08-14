@@ -29,7 +29,7 @@ const FAQ: React.FC = () => {
     {
       category: "Participation",
       question: "What is the team size limit?",
-      answer: "Teams can have a maximum of 3 members. You can register as a solo participant or with a pre-formed team. Team member 1 is automatically the team leader. All team members must register and pay the ₹1,499 registration fee individually."
+      answer: "Teams can have a maximum of 3 members. You can register as a solo participant or with a pre-formed team. Team member 1 is automatically the team leader. Team should register and pay the ₹1,499 registration fee"
     },
     {
       category: "Participation",
