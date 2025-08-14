@@ -1,5 +1,22 @@
 import React from 'react';
-import { User, Briefcase, TrendingUp, Cpu } from 'lucide-react';
+import { User, Briefcase, TrendingUp, Cpu, Github, Linkedin } from 'lucide-react';
+
+// Import organizing committee photos
+import drPrabhakaraReddyPhoto from '../assets/Logos/Organizing Committe/Dr. A. Prabhakara Reddy.png';
+import drManjulaPhoto from '../assets/Logos/Organizing Committe/Dr. N Manjula.png';
+import drSujanaReddyPhoto from '../assets/Logos/Organizing Committe/Dr. Sujana P Reddy.png';
+import drPrabhakarSekarPhoto from '../assets/Logos/Organizing Committe/Dr. Prabhakar Sekar.png';
+
+// Import hackathon crew photos
+import jeelanBashaPhoto from '../assets/Hackathon Crew/Jeelan Basha.png';
+import sameerPhoto from '../assets/Hackathon Crew/Sameer.png';
+import amanKumarPhoto from '../assets/Hackathon Crew/Aman Kumar.png';
+import likhithKumarPhoto from '../assets/Hackathon Crew/Likhith Kumar.png';
+import pruthviReddyPhoto from '../assets/Hackathon Crew/Pruthvi Narayana Reddy V.jpg';
+import apoliseDiasPhoto from '../assets/Hackathon Crew/Apolise Dias.png';
+import hemavathiPhoto from '../assets/Hackathon Crew/Hemavathi.png';
+import santhoshPhoto from '../assets/Hackathon Crew/Santhosh.png';
+import prajwalPhoto from '../assets/Hackathon Crew/Prajwal.png';
 
 const OrganizingCommittee: React.FC = () => {
   const committee = [
@@ -8,6 +25,7 @@ const OrganizingCommittee: React.FC = () => {
       position: "Chief Executive Officer (CEO)",
       organization: "BTI IGNITE INCUBATION COUNCIL",
       description: "Visionary leader driving innovation and entrepreneurship through BTI Ignite Incubation Council.",
+      photo: drPrabhakaraReddyPhoto,
       icon: <User className="w-12 h-12" />,
       color: "from-blue-400 to-blue-600",
       shadowColor: "shadow-blue-500/30"
@@ -17,6 +35,7 @@ const OrganizingCommittee: React.FC = () => {
       position: "Chief Financial Officer (CFO)",
       organization: "BTI IGNITE INCUBATION COUNCIL",
       description: "Strategic financial leader ensuring sustainable growth and fiscal excellence at BTI Ignite.",
+      photo: drManjulaPhoto,
       icon: <TrendingUp className="w-12 h-12" />,
       color: "from-green-400 to-green-600",
       shadowColor: "shadow-green-500/30"
@@ -26,6 +45,7 @@ const OrganizingCommittee: React.FC = () => {
       position: "Chief Operating Officer (COO)",
       organization: "BTI IGNITE INCUBATION COUNCIL",
       description: "Operations expert driving efficiency and excellence in incubation programs and initiatives.",
+      photo: drSujanaReddyPhoto,
       icon: <Briefcase className="w-12 h-12" />,
       color: "from-purple-400 to-purple-600",
       shadowColor: "shadow-purple-500/30"
@@ -35,6 +55,7 @@ const OrganizingCommittee: React.FC = () => {
       position: "Chief Technology Officer (CTO)",
       organization: "BTI IGNITE INCUBATION COUNCIL",
       description: "Technology visionary leading innovation and technical excellence in startup incubation.",
+      photo: drPrabhakarSekarPhoto,
       icon: <Cpu className="w-12 h-12" />,
       color: "from-orange-400 to-orange-600",
       shadowColor: "shadow-orange-500/30"
@@ -61,10 +82,12 @@ const OrganizingCommittee: React.FC = () => {
               className={`bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-8 hover:scale-105 transition-all duration-300 ${member.shadowColor} shadow-2xl group`}
             >
               <div className="flex items-start space-x-6">
-                <div className={`bg-gradient-to-r ${member.color} rounded-full w-20 h-20 flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform`}>
-                  <div className="text-white">
-                    {member.icon}
-                  </div>
+                <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <img 
+                    src={member.photo} 
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover border-4 border-orange-500/30 shadow-lg"
+                  />
                 </div>
 
                 <div className="flex-1">
@@ -85,6 +108,137 @@ const OrganizingCommittee: React.FC = () => {
             to create a thriving ecosystem for startups and innovators. Together, they guide BTI Ignite Incubation Council 
             towards its mission of fostering the next generation of successful entrepreneurs.
           </p>
+        </div>
+
+        {/* Hackathon Crew Section */}
+        <div className="mt-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+              Hackathon <span className="text-orange-500">Crew</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Meet our dedicated hackathon crew of 9 talented members who make this event possible through their expertise and passion.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Jeelan Basha",
+                role: "Website Designer & Technical Coordinator",
+                department: "AI&ML, BTI",
+                photo: jeelanBashaPhoto,
+                github: "https://github.com/jeelan80",
+                linkedin: "https://www.linkedin.com/in/jeelan-basha-508a19314/"
+              },
+              {
+                name: "Sameer",
+                role: "Website Designer & Technical Coordinator",
+                department: "ROAI, Full Stack Intern(BTI IGNITE)",
+                photo: sameerPhoto,
+                github: "https://github.com/sameersam648",
+                linkedin: "https://www.linkedin.com/in/sameer-83733a2a6/"
+              },
+              {
+                name: "Aman Kumar",
+                role: "Technical Coordinator",
+                department: "ROAI, BTI",
+                photo: amanKumarPhoto,
+                github: "https://github.com/Amankumar006/",
+                linkedin: "https://www.linkedin.com/in/aman-kumar-8102bb279/"
+              },
+              {
+                name: "Likhith Kumar",
+                role: "Poster Designer & Technical Coordinator",
+                department: "AI&ML, Full Stack Intern(BTI IGNITE)",
+                photo: likhithKumarPhoto,
+                github: "https://github.com/likhithkumar",
+                linkedin: "https://www.linkedin.com/in/likhithkumarj/"
+              },
+              {
+                name: "Pruthvi Narayana Reddy V",
+                role: "Event Manager (Students Secretary BTI)",
+                department: "BTI",
+                photo: pruthviReddyPhoto,
+                github: null,
+                linkedin: null
+              },
+              {
+                name: "Apolise Dias",
+                role: "HR Intern",
+                department: "BTI IGNITE",
+                photo: apoliseDiasPhoto,
+                github: null,
+                linkedin: null
+              },
+              {
+                name: "Hemavathi",
+                role: "Finance Intern",
+                department: "BTI IGNITE",
+                photo: hemavathiPhoto,
+                github: null,
+                linkedin: null
+              },
+              {
+                name: "Santhosh Kumar K",
+                role: "Finance Intern",
+                department: "BTI IGNITE",
+                photo: santhoshPhoto,
+                github: null,
+                linkedin: null
+              },
+              {
+                name: "Prajwal",
+                role: "Startup Networking Intern",
+                department: "BTI IGNITE",
+                photo: prajwalPhoto,
+                github: null,
+                linkedin: null
+              }
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-200"
+              >
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4">
+                    <img 
+                      src={member.photo} 
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full object-cover border-4 border-orange-500/30 shadow-lg hover:scale-110 transition-transform"
+                    />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-orange-600 font-semibold text-sm mb-2">{member.role}</p>
+                  <p className="text-gray-600 text-xs mb-4">{member.department}</p>
+                  
+                  <div className="flex justify-center space-x-3">
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-gray-900 text-white rounded-full hover:bg-gray-700 transition-colors"
+                      >
+                        <Github className="w-4 h-4" />
+                      </a>
+                    )}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
