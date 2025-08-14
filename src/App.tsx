@@ -6,6 +6,7 @@ import Registration from './components/Registration';
 import Challenges from './components/Challenges';
 import Prizes from './components/Prizes';
 import Schedule from './components/Schedule';
+import OrganizingCommittee from './components/OrganizingCommittee';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ function App() {
       <Challenges />
       <Prizes />
       <Schedule />
+      <OrganizingCommittee />
       <FAQ />
       <Contact />
       <Footer />

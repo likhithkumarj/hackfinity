@@ -1,127 +1,101 @@
 import React from 'react';
-import { Clock, Coffee, Code, Users, Trophy, MapPin } from 'lucide-react';
+import { Clock, Coffee, Code, Users, Trophy, MapPin, Milestone, Presentation } from 'lucide-react';
 
 const Schedule: React.FC = () => {
-  const scheduleDay1 = [
+  const schedule = [
     {
-      time: "8:00 AM",
-      title: "Registration & Check-in",
-      description: "Welcome participants, distribute swag, breakfast",
+      time: "3:00 PM",
+      duration: "1 hour",
+      title: "Registration Begins",
+      description: "Check-in, team formation, and welcome session. Get ready to innovate!",
       icon: <Users className="w-5 h-5" />,
-      type: "registration"
-    },
-    {
-      time: "9:30 AM",
-      title: "Opening Ceremony",
-      description: "Welcome address, event overview, problem statements reveal",
-      icon: <Trophy className="w-5 h-5" />,
       type: "ceremony"
     },
     {
-      time: "10:30 AM",
-      title: "Team Formation & Networking",
-      description: "Final team registration, networking session",
-      icon: <Users className="w-5 h-5" />,
-      type: "networking"
-    },
-    {
-      time: "11:00 AM",
-      title: "Hackathon Begins!",
-      description: "Coding starts, mentors available for guidance",
-      icon: <Code className="w-5 h-5" />,
-      type: "coding"
-    },
-    {
-      time: "1:00 PM",
-      title: "Lunch Break",
-      description: "Nutritious lunch provided for all participants",
-      icon: <Coffee className="w-5 h-5" />,
-      type: "break"
-    },
-    {
-      time: "2:00 PM",
-      title: "Coding Continues",
-      description: "Intense development phase, mentor support available",
-      icon: <Code className="w-5 h-5" />,
-      type: "coding"
-    },
-    {
       time: "4:00 PM",
-      title: "Snacks & Refreshments",
-      description: "Energy boost with snacks and beverages",
-      icon: <Coffee className="w-5 h-5" />,
-      type: "break"
+      duration: "30 mins",
+      title: "Hackathon Officially Starts",
+      description: "Opening ceremony, problem statements revealed, and rules explained.",
+      icon: <Trophy className="w-5 h-5" />,
+      type: "milestone"
     },
     {
-      time: "6:00 PM",
-      title: "Dinner Time",
-      description: "Delicious dinner and socializing",
-      icon: <Coffee className="w-5 h-5" />,
-      type: "break"
+      time: "4:30 PM",
+      duration: "2.5 hours",
+      title: "Hacking Begins",
+      description: "Teams start working on their AI solutions for social good. Mentors available for guidance.",
+      icon: <Code className="w-5 h-5" />,
+      type: "workshop"
     },
     {
       time: "7:00 PM",
-      title: "Night Coding Session",
-      description: "Late night development, 24/7 support available",
-      icon: <Code className="w-5 h-5" />,
-      type: "coding"
+      duration: "30 mins",
+      title: "Snacks Break",
+      description: "Quick refreshment break to recharge and network with other teams.",
+      icon: <Coffee className="w-5 h-5" />,
+      type: "ceremony"
     },
     {
-      time: "10:00 PM",
-      title: "Midnight Snacks",
-      description: "Late night fuel for developers",
+      time: "8:30 PM",
+      duration: "1 hour",
+      title: "Dinner Break",
+      description: "Networking dinner and informal mentorship sessions. Connect with industry professionals.",
       icon: <Coffee className="w-5 h-5" />,
-      type: "break"
-    }
-  ];
-
-  const scheduleDay2 = [
-    {
-      time: "6:00 AM",
-      title: "Early Morning Breakfast",
-      description: "Fresh start with healthy breakfast",
-      icon: <Coffee className="w-5 h-5" />,
-      type: "break"
+      type: "ceremony"
     },
     {
-      time: "7:00 AM",
-      title: "Final Development Phase",
-      description: "Last push for implementation and testing",
+      time: "1:00 AM",
+      duration: "30 mins",
+      title: "Midnight Coffee/Tea Break",
+      description: "Late night fuel! Coffee, tea, and light snacks to keep you energized.",
+      icon: <Coffee className="w-5 h-5" />,
+      type: "ceremony"
+    },
+    {
+      time: "8:00 AM",
+      duration: "1 hour",
+      title: "Breakfast",
+      description: "Morning breakfast to fuel the final stretch of development.",
+      icon: <Coffee className="w-5 h-5" />,
+      type: "ceremony"
+    },
+    {
+      time: "9:00 AM",
+      duration: "1 hour",
+      title: "Final Sprint",
+      description: "Last hour to polish your solution and prepare for submission.",
       icon: <Code className="w-5 h-5" />,
-      type: "coding"
+      type: "workshop"
+    },
+    {
+      time: "10:00 AM",
+      duration: "15 mins",
+      title: "Submission Deadline",
+      description: "All projects must be submitted. No more coding allowed after this point!",
+      icon: <Trophy className="w-5 h-5" />,
+      type: "milestone"
+    },
+    {
+      time: "10:15 AM",
+      duration: "45 mins",
+      title: "PPT Submission Deadline",
+      description: "Final presentation slides must be submitted for judging.",
+      icon: <Presentation className="w-5 h-5" />,
+      type: "milestone"
     },
     {
       time: "11:00 AM",
-      title: "Submission Deadline",
-      description: "Code freeze! Time to submit your projects",
+      duration: "30 mins",
+      title: "Top 3 Teams Finalized",
+      description: "Judges announce the top 3 teams who will present to the panel.",
       icon: <Trophy className="w-5 h-5" />,
-      type: "deadline"
+      type: "milestone"
     },
     {
       time: "11:30 AM",
-      title: "Presentation Preparation",
-      description: "Prepare your pitches and demonstrations",
-      icon: <Users className="w-5 h-5" />,
-      type: "preparation"
-    },
-    {
-      time: "12:00 PM",
-      title: "Team Presentations",
-      description: "Each team presents their solution (5 min + Q&A)",
-      icon: <Trophy className="w-5 h-5" />,
-      type: "presentation"
-    },
-    {
-      time: "1:30 PM",
-      title: "Judging & Lunch",
-      description: "Judges evaluate while participants enjoy lunch",
-      icon: <Coffee className="w-5 h-5" />,
-      type: "judging"
-    },
-    {
-      time: "2:30 PM",
-      title: "Results & Prize Distribution",
-      description: "Winner announcement and prize ceremony",
+      duration: "30 mins",
+      title: "Event Closure",
+      description: "Winner announcements, awards ceremony, and closing remarks.",
       icon: <Trophy className="w-5 h-5" />,
       type: "ceremony"
     }
@@ -129,15 +103,9 @@ const Schedule: React.FC = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'registration': return 'border-blue-500 bg-blue-500/20';
       case 'ceremony': return 'border-purple-500 bg-purple-500/20';
-      case 'networking': return 'border-green-500 bg-green-500/20';
-      case 'coding': return 'border-orange-500 bg-orange-500/20';
-      case 'break': return 'border-yellow-500 bg-yellow-500/20';
-      case 'deadline': return 'border-red-500 bg-red-500/20';
-      case 'preparation': return 'border-indigo-500 bg-indigo-500/20';
-      case 'presentation': return 'border-pink-500 bg-pink-500/20';
-      case 'judging': return 'border-gray-500 bg-gray-500/20';
+      case 'milestone': return 'border-red-500 bg-red-500/20';
+      case 'workshop': return 'border-orange-500 bg-orange-500/20';
       default: return 'border-gray-500 bg-gray-500/20';
     }
   };
@@ -166,44 +134,18 @@ const Schedule: React.FC = () => {
           </div>
         </div>
 
-        {/* Day 1 Schedule */}
+        {/* Event Schedule */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Day 1 - August 22, 2025 <span className="text-orange-500">(Friday)</span>
+            18-Hour Hackathon Timeline <span className="text-orange-500">(August 22-23, 2025)</span>
           </h3>
           <div className="space-y-4">
-            {scheduleDay1.map((item, index) => (
+            {schedule.map((item, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="p-6 flex items-center space-x-6">
-                  <div className="flex-shrink-0 w-20 text-center">
+                  <div className="flex-shrink-0 w-24 text-center">
                     <div className="text-lg font-bold text-gray-900">{item.time}</div>
-                  </div>
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 ${getTypeColor(item.type)} flex items-center justify-center`}>
-                    <div className="text-gray-700">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <div className="flex-grow">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-1">{item.title}</h4>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Day 2 Schedule */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Day 2 - August 23, 2025 <span className="text-orange-500">(Saturday)</span>
-          </h3>
-          <div className="space-y-4">
-            {scheduleDay2.map((item, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="p-6 flex items-center space-x-6">
-                  <div className="flex-shrink-0 w-20 text-center">
-                    <div className="text-lg font-bold text-gray-900">{item.time}</div>
+                    <div className="text-sm text-gray-500">{item.duration}</div>
                   </div>
                   <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 ${getTypeColor(item.type)} flex items-center justify-center`}>
                     <div className="text-gray-700">
