@@ -49,9 +49,9 @@ const FAQ: React.FC = () => {
   ];
 
   const categories = ['All', 'General', 'Participation', 'Technical', 'Prizes & Judging'];
-  
-  const filteredFAQs = selectedCategory === 'All' 
-    ? faqs 
+
+  const filteredFAQs = selectedCategory === 'All'
+    ? faqs
     : faqs.filter(faq => faq.category === selectedCategory);
 
   const toggleFAQ = (index: number) => {
@@ -66,10 +66,10 @@ const FAQ: React.FC = () => {
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
-            Got questions? We've got answers! Here are the most commonly asked questions 
+            Got questions? We've got answers! Here are the most commonly asked questions
             about HACKFINITY 2025. Don't see your question? Feel free to contact us.
           </p>
-          
+
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-4 sm:px-0">
             {categories.map((category) => (
@@ -79,27 +79,26 @@ const FAQ: React.FC = () => {
                   setSelectedCategory(category);
                   setOpenIndex(null);
                 }}
-                className={`px-3 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-base ${
-                  selectedCategory === category
+                className={`px-3 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-base ${selectedCategory === category
                     ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
                     : 'bg-black/50 text-gray-300 border border-orange-500/30 hover:bg-orange-500/20 hover:text-orange-300'
-                }`}
+                  }`}
               >
                 {category}
               </button>
             ))}
           </div>
-          
+
           <div className="text-center text-gray-400 text-xs sm:text-sm">
-            Showing {filteredFAQs.length} question{filteredFAQs.length !== 1 ? 's' : ''} 
+            Showing {filteredFAQs.length} question{filteredFAQs.length !== 1 ? 's' : ''}
             {selectedCategory !== 'All' && ` in ${selectedCategory}`}
           </div>
         </div>
 
         <div className="space-y-4">
           {filteredFAQs.map((faq, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-500/50"
             >
               <button
@@ -125,7 +124,7 @@ const FAQ: React.FC = () => {
                   )}
                 </div>
               </button>
-              
+
               {openIndex === index && (
                 <div className="px-4 pb-4 sm:px-8 sm:pb-6">
                   <div className="pl-8 sm:pl-16">
@@ -145,7 +144,7 @@ const FAQ: React.FC = () => {
             Can't find the answer you're looking for? Our team is here to help!
           </p>
           <div className="flex justify-center">
-            <button 
+            <button
               onClick={() => window.location.href = 'mailto:director@btibangalore.com?subject=Support Request - HACKFINITY 2025&body=Hi, I need help with...'}
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-full font-semibold transition-colors text-sm sm:text-base"
             >
