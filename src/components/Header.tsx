@@ -30,10 +30,7 @@ const Header: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">H</span>
-            </div>
+          <div className="flex items-center">
             <div>
               <h1 className="text-white font-bold text-xl">HACKFINITY</h1>
               <p className="text-orange-500 text-xs">18 HOURS HACKATHON</p>

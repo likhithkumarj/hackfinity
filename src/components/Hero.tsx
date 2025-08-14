@@ -35,16 +35,18 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-16 sm:py-20">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 bg-orange-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 sm:top-40 right-4 sm:right-20 w-20 h-20 sm:w-32 sm:h-32 bg-orange-500/10 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-32 sm:bottom-40 left-1/4 w-12 h-12 sm:w-16 sm:h-16 bg-orange-500/30 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-16 sm:bottom-20 right-1/3 w-16 h-16 sm:w-24 sm:h-24 bg-orange-500/20 rounded-full animate-bounce"></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-2 sm:left-6 w-8 h-8 sm:w-12 sm:h-12 bg-orange-500/15 rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-2 sm:right-8 w-10 h-10 sm:w-16 sm:h-16 bg-orange-500/10 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-20 left-8 sm:left-16 w-6 h-6 sm:w-10 sm:h-10 bg-orange-500/20 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-10 right-6 sm:right-12 w-8 h-8 sm:w-14 sm:h-14 bg-orange-500/15 rounded-full animate-bounce"></div>
+        <div className="absolute top-1/2 left-1 sm:left-4 w-4 h-4 sm:w-8 sm:h-8 bg-orange-500/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-3/4 right-1 sm:right-4 w-6 h-6 sm:w-10 sm:h-10 bg-orange-500/15 rounded-full animate-bounce"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-8 pb-16 sm:pb-48">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-8 pb-8 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center lg:text-left order-2 lg:order-2">
             <div className="mb-6">
               <div className="inline-block bg-orange-500/20 text-orange-500 px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
                 BTI IGNITE INCUBATION COUNCIL
@@ -93,7 +95,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="space-y-4 order-1 lg:order-2">
+          <div className="space-y-4 order-1 lg:order-1">
             {/* Sponsor Logos */}
             <div className="bg-black/30 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-4">
               <h3 className="text-base sm:text-lg font-semibold text-white mb-3 text-center">Powered By</h3>
