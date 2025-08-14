@@ -145,7 +145,10 @@ const FAQ: React.FC = () => {
             Can't find the answer you're looking for? Our team is here to help!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+            <button 
+              onClick={() => window.location.href = 'mailto:director@btibangalore.com?subject=Support Request - HACKFINITY 2025&body=Hi, I need help with...'}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors"
+            >
               Contact Support
             </button>
 

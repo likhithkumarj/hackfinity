@@ -57,7 +57,10 @@ const Header: React.FC = () => {
               <Clock className="w-4 h-4 text-orange-500" />
               <span>Aug 22, 2025</span>
             </div>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-colors">
+            <button 
+              onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-colors"
+            >
               Register Now
             </button>
           </div>
@@ -84,7 +87,13 @@ const Header: React.FC = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full font-medium transition-colors">
+              <button 
+                onClick={() => {
+                  document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-full font-medium transition-colors"
+              >
                 Register Now
               </button>
             </nav>

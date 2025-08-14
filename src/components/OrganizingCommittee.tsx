@@ -58,7 +58,8 @@ const OrganizingCommittee: React.FC = () => {
       photo: drPrabhakarSekarPhoto,
       icon: <Cpu className="w-12 h-12" />,
       color: "from-orange-400 to-orange-600",
-      shadowColor: "shadow-orange-500/30"
+      shadowColor: "shadow-orange-500/30",
+      linkedin: "https://www.linkedin.com/in/dr-prabhakar-sekar-27514544?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   ];
 
@@ -94,7 +95,22 @@ const OrganizingCommittee: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                   <div className="text-orange-500 font-semibold text-lg mb-1">{member.position}</div>
                   <div className="text-gray-400 text-sm mb-4 font-medium">{member.organization}</div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.description}</p>
+                  
+                  {/* LinkedIn icon for Dr. Prabhakar Sekar */}
+                  {member.linkedin && (
+                    <div className="flex items-center space-x-2">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors text-sm"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        <span>Connect on LinkedIn</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

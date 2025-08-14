@@ -126,21 +126,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Emergency Information */}
-        <div className="mt-16 bg-orange-500 rounded-3xl p-8 text-center">
-          <h3 className="text-3xl font-bold text-white mb-6">Need Immediate Help?</h3>
-          <p className="text-orange-100 mb-8 text-lg max-w-2xl mx-auto">
-            For urgent inquiries or emergency situations during the event, contact our 24/7 support team.
-          </p>
-          <div className="flex justify-center">
-            <button 
-              onClick={() => handleCall("9632724212")}
-              className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-colors"
-            >
-              Call Emergency Line: 9632724212
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   );

@@ -2,6 +2,41 @@ import React from 'react';
 import { Facebook, Instagram, Mail, Phone, MapPin, Heart, MessageCircle, Youtube, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  // Function to handle support actions
+  const handleSupportClick = (supportType: string) => {
+    const supportActions: { [key: string]: () => void } = {
+      'Registration Help': () => {
+        // Scroll to registration section
+        document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' });
+      },
+      'Technical Support': () => {
+        // Open email client for technical support
+        window.location.href = 'mailto:director@btibangalore.com?subject=Technical Support - HACKFINITY 2025&body=Hi, I need technical support regarding...';
+      },
+      'Payment Issues': () => {
+        // Open email client for payment issues
+        window.location.href = 'mailto:director@btibangalore.com?subject=Payment Issues - HACKFINITY 2025&body=Hi, I am facing payment issues...';
+      },
+      'Team Formation': () => {
+        // Scroll to FAQ section where team formation is explained
+        document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+      },
+      'Mentorship': () => {
+        // Open email client for mentorship inquiries
+        window.location.href = 'mailto:director@btibangalore.com?subject=Mentorship Inquiry - HACKFINITY 2025&body=Hi, I would like to know more about mentorship...';
+      },
+      'Venue Information': () => {
+        // Scroll to contact section where venue info is displayed
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    const action = supportActions[supportType];
+    if (action) {
+      action();
+    }
+  };
+
   const socialLinks = [
     { 
       icon: <MessageCircle className="w-5 h-5" />, 
@@ -40,12 +75,12 @@ const Footer: React.FC = () => {
   ];
 
   const supportLinks = [
-    { name: "Registration Help", href: "#" },
-    { name: "Technical Support", href: "#" },
-    { name: "Payment Issues", href: "#" },
-    { name: "Team Formation", href: "#" },
-    { name: "Mentorship", href: "#" },
-    { name: "Venue Information", href: "#" }
+    { name: "Registration Help", action: () => handleSupportClick("Registration Help") },
+    { name: "Technical Support", action: () => handleSupportClick("Technical Support") },
+    { name: "Payment Issues", action: () => handleSupportClick("Payment Issues") },
+    { name: "Team Formation", action: () => handleSupportClick("Team Formation") },
+    { name: "Mentorship", action: () => handleSupportClick("Mentorship") },
+    { name: "Venue Information", action: () => handleSupportClick("Venue Information") }
   ];
 
   return (
@@ -109,13 +144,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-orange-500 transition-colors flex items-center space-x-2"
+                  <button
+                    onClick={link.action}
+                    className="text-gray-400 hover:text-orange-500 transition-colors flex items-center space-x-2 text-left"
                   >
                     <span className="w-1 h-1 bg-orange-500 rounded-full"></span>
                     <span>{link.name}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
