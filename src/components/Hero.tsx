@@ -150,8 +150,8 @@ const Hero: React.FC = () => {
               </div>
               <div className="bg-black/30 backdrop-blur-sm border border-orange-500/30 rounded-lg p-3 sm:p-4 text-center">
                 <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500 mx-auto mb-2" />
-                <div className="text-lg sm:text-2xl font-bold text-white">4</div>
-                <div className="text-gray-400 text-xs sm:text-sm">Problem Statements</div>
+                <div className="text-lg sm:text-2xl font-bold text-white">5</div>
+                <div className="text-gray-400 text-xs sm:text-sm">Themes</div>
               </div>
               <div className="bg-black/30 backdrop-blur-sm border border-orange-500/30 rounded-lg p-3 sm:p-4 text-center">
                 <Award className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500 mx-auto mb-2" />
