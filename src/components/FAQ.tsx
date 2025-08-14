@@ -1,59 +1,58 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, Filter } from 'lucide-react';
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const faqs = [
     {
-      question: "Who can participate in HACKFINITY?",
-      answer: "HACKFINITY is open to all students, developers, and tech enthusiasts. You can participate as an individual or form teams of up to 3 members. All skill levels are welcome!"
+      category: "General",
+      question: "What is HACKFINITY?",
+      answer: "HACKFINITY is an 18-hour offline hackathon focused on building AI solutions for social good, taking place on August 22-23, 2025 at Bangalore Technological Institute (BTI). Participants work in teams to create innovative applications that address real-world social challenges using artificial intelligence."
     },
     {
-      question: "What is the registration fee and what does it include?",
-      answer: "The registration fee is ₹1,499 per team (not per person). This includes all meals throughout the 18-hour event, refreshments, swag bag, access to mentorship, networking opportunities, and participation certificates."
+      category: "General",
+      question: "What is included in the registration fee?",
+      answer: "The ₹1,499 registration fee includes: venue access for 18 hours, meals and refreshments, HACKFINITY swag kit, mentorship sessions, networking opportunities, and participation in all hackathon activities. This is a one-time fee per participant."
     },
     {
-      question: "Do I need to bring my own laptop and equipment?",
-      answer: "Yes, participants need to bring their own laptops, chargers, and any specific hardware they might need for their project. We'll provide high-speed internet, power outlets, and comfortable workspaces."
+      category: "General",
+      question: "Where and when is HACKFINITY taking place?",
+      answer: "HACKFINITY takes place on August 22-23, 2025 at Bangalore Technological Institute (BTI) campus in Bangalore. It's an 18-hour offline event where participants will work continuously to build their AI solutions for social good."
     },
     {
-      question: "Can I participate alone or do I need a team?",
-      answer: "You can participate either as an individual or as part of a team (max 3 members). If you're participating alone, we'll have a team formation session at the beginning of the event to help you find teammates."
+      category: "Participation",
+      question: "How do I register and what does it cost?",
+      answer: "Registration is simple! Click the \"Register Now\" button on our homepage and fill out the registration form. The registration fee is ₹1,499 per participant, which includes meals, venue access, swag, and participation in all activities. Payment is processed securely through Razorpay."
     },
     {
-      question: "What programming languages and technologies can I use?",
-      answer: "You can use any programming languages, frameworks, APIs, and technologies you're comfortable with. Popular choices include Python, JavaScript, Java, C++, React, Node.js, mobile app frameworks, and more."
+      category: "Participation",
+      question: "What is the team size limit?",
+      answer: "Teams can have a maximum of 3 members. You can register as a solo participant or with a pre-formed team. Team member 1 is automatically the team leader. All team members must register and pay the ₹1,499 registration fee individually."
     },
     {
-      question: "Will mentors be available during the hackathon?",
-      answer: "Yes! We'll have experienced mentors from various tech domains available throughout the event to provide guidance, answer technical questions, and help you with your project development."
+      category: "Participation",
+      question: "Can I get a refund if I cannot attend?",
+      answer: "No, all registration fees are non-refundable once payment is collected. Refunds are only provided if the event is cancelled by the organizers. We recommend ensuring your availability before registering as personal circumstances do not qualify for refunds."
     },
     {
-      question: "What should I bring to the hackathon?",
-      answer: "Essential items: Laptop, chargers, phone, valid ID, comfortable clothes, personal hygiene items, and any specific hardware for your project. We recommend bringing a sleeping bag or blanket for rest periods."
+      category: "Technical",
+      question: "What are the submission requirements?",
+      answer: "Teams must submit their working solution with source code, a presentation explaining their project, and a demo. All submissions must be related to AI for social good and be original work created during the 18-hour hackathon period. Pre-existing libraries and APIs are allowed."
     },
     {
-      question: "Are there any accommodation arrangements?",
-      answer: "The event runs for 18 continuous hours at BTI Campus. While we don't provide formal accommodation, there will be designated rest areas where participants can take power naps during the event."
-    },
-    {
-      question: "How will projects be evaluated and judged?",
-      answer: "Projects will be judged based on four main criteria: Innovation & Creativity (25%), Technical Implementation (25%), Real-world Impact (25%), and Presentation Quality (25%). Each team will have 5 minutes to present followed by Q&A."
-    },
-    {
-      question: "When will the results be announced?",
-      answer: "Results will be announced on Day 2 (August 23) at 2:30 PM during the closing ceremony, immediately after the judging process is complete."
-    },
-    {
-      question: "Can I start working on my project before the hackathon?",
-      answer: "No, all code must be written during the 18-hour hackathon period. However, you can come with ideas, do research, and plan your approach beforehand."
-    },
-    {
-      question: "What happens if I have technical issues during the event?",
-      answer: "Our technical support team will be available 24/7 throughout the event to help with any technical issues, internet connectivity problems, or other logistical concerns."
+      category: "Prizes & Judging",
+      question: "What are the prizes and how much can I win?",
+      answer: "HACKFINITY offers a total prize pool of ₹18,000! Prizes are awarded based on innovation, technical implementation, social impact potential, and presentation quality. Winners will be announced at the closing ceremony and prizes distributed within 30 days."
     }
   ];
+
+  const categories = ['All', 'General', 'Participation', 'Technical', 'Prizes & Judging'];
+  
+  const filteredFAQs = selectedCategory === 'All' 
+    ? faqs 
+    : faqs.filter(faq => faq.category === selectedCategory);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -66,14 +65,39 @@ const FAQ: React.FC = () => {
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Got questions? We've got answers! Here are the most commonly asked questions 
             about HACKFINITY 2025. Don't see your question? Feel free to contact us.
           </p>
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setOpenIndex(null);
+                }}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
+                    : 'bg-black/50 text-gray-300 border border-orange-500/30 hover:bg-orange-500/20 hover:text-orange-300'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          
+          <div className="text-center text-gray-400 text-sm">
+            Showing {filteredFAQs.length} question{filteredFAQs.length !== 1 ? 's' : ''} 
+            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+          </div>
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {filteredFAQs.map((faq, index) => (
             <div 
               key={index} 
               className="bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-500/50"
@@ -86,9 +110,12 @@ const FAQ: React.FC = () => {
                   <div className="bg-orange-500/20 rounded-full p-2 group-hover:bg-orange-500/30 transition-colors">
                     <HelpCircle className="w-5 h-5 text-orange-500" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white group-hover:text-orange-300 transition-colors">
-                    {faq.question}
-                  </h3>
+                  <div>
+                    <div className="text-xs text-orange-400 font-medium mb-1">{faq.category}</div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-orange-300 transition-colors">
+                      {faq.question}
+                    </h3>
+                  </div>
                 </div>
                 <div className="text-orange-500 group-hover:text-orange-400 transition-colors">
                   {openIndex === index ? (
