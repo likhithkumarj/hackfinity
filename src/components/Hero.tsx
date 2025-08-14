@@ -4,6 +4,37 @@ import btiCollegeLogo from '../assets/Logos/Bti College Logo.png';
 import btiIgniteLogo from '../assets/Logos/BTIIGNITE LOGO.png';
 import ceoLogo from '../assets/Logos/CEO - BTIINGINE.png';
 
+// Countdown Card Component with Smooth Scale Animation
+const CountdownCard: React.FC<{ value: number; label: string }> = ({ value, label }) => {
+  const [displayValue, setDisplayValue] = useState(value);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (value !== displayValue) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setDisplayValue(value);
+        setIsAnimating(false);
+      }, 200);
+    }
+  }, [value, displayValue]);
+
+  return (
+    <div className="relative">
+      <div className={`bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg p-2 sm:p-4 shadow-lg border border-orange-400/30 transition-all duration-200 ease-out ${
+        isAnimating ? 'scale-110 shadow-orange-500/50' : 'scale-100'
+      }`}>
+        <div className={`text-xl sm:text-3xl font-bold text-white transition-all duration-200 ${
+          isAnimating ? 'scale-125 text-yellow-200' : 'scale-100'
+        }`}>
+          {displayValue}
+        </div>
+        <div className="text-orange-100 text-xs sm:text-sm font-medium">{label}</div>
+      </div>
+    </div>
+  );
+};
+
 const Hero: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -122,22 +153,10 @@ const Hero: React.FC = () => {
             <div className="bg-black/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-4 sm:p-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">Event Countdown</h3>
               <div className="grid grid-cols-4 gap-2 sm:gap-4 text-center">
-                <div className="bg-orange-500 rounded-lg p-2 sm:p-4">
-                  <div className="text-xl sm:text-3xl font-bold text-white">{timeLeft.days}</div>
-                  <div className="text-orange-100 text-xs sm:text-sm">DAYS</div>
-                </div>
-                <div className="bg-orange-500 rounded-lg p-2 sm:p-4">
-                  <div className="text-xl sm:text-3xl font-bold text-white">{timeLeft.hours}</div>
-                  <div className="text-orange-100 text-xs sm:text-sm">HOURS</div>
-                </div>
-                <div className="bg-orange-500 rounded-lg p-2 sm:p-4">
-                  <div className="text-xl sm:text-3xl font-bold text-white">{timeLeft.minutes}</div>
-                  <div className="text-orange-100 text-xs sm:text-sm">MINUTES</div>
-                </div>
-                <div className="bg-orange-500 rounded-lg p-2 sm:p-4">
-                  <div className="text-xl sm:text-3xl font-bold text-white">{timeLeft.seconds}</div>
-                  <div className="text-orange-100 text-xs sm:text-sm">SECONDS</div>
-                </div>
+                <CountdownCard value={timeLeft.days} label="DAYS" />
+                <CountdownCard value={timeLeft.hours} label="HOURS" />
+                <CountdownCard value={timeLeft.minutes} label="MINUTES" />
+                <CountdownCard value={timeLeft.seconds} label="SECONDS" />
               </div>
             </div>
 

@@ -71,7 +71,7 @@ const OrganizingCommittee: React.FC = () => {
             Organizing <span className="text-orange-500">Committee</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0">
-            Meet the dedicated organizing committee behind BTI Ignite Incubation Council, driving innovation 
+            Meet the dedicated organizing committee behind BTI Ignite Incubation Council, driving innovation
             and excellence in startup incubation and entrepreneurship development.
           </p>
         </div>
@@ -84,8 +84,8 @@ const OrganizingCommittee: React.FC = () => {
             >
               <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
                 <div className="flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <img 
-                    src={member.photo} 
+                  <img
+                    src={member.photo}
                     alt={member.name}
                     className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-orange-500/30 shadow-lg"
                   />
@@ -96,7 +96,7 @@ const OrganizingCommittee: React.FC = () => {
                   <div className="text-orange-500 font-semibold text-base sm:text-lg mb-1">{member.position}</div>
                   <div className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 font-medium">{member.organization}</div>
                   <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">{member.description}</p>
-                  
+
                   {/* LinkedIn icon for Dr. Prabhakar Sekar */}
                   {member.linkedin && (
                     <div className="flex items-center justify-center sm:justify-start space-x-2">
@@ -120,8 +120,8 @@ const OrganizingCommittee: React.FC = () => {
         <div className="text-center mt-12 sm:mt-16 bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-2xl p-6 sm:p-8">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">Driving Excellence Together</h3>
           <p className="text-gray-300 text-base sm:text-lg max-w-4xl mx-auto px-4 sm:px-0">
-            Our organizing committee combines decades of experience in technology, finance, operations, and entrepreneurship 
-            to create a thriving ecosystem for startups and innovators. Together, they guide BTI Ignite Incubation Council 
+            Our organizing committee combines decades of experience in technology, finance, operations, and entrepreneurship
+            to create a thriving ecosystem for startups and innovators. Together, they guide BTI Ignite Incubation Council
             towards its mission of fostering the next generation of successful entrepreneurs.
           </p>
         </div>
@@ -218,17 +218,17 @@ const OrganizingCommittee: React.FC = () => {
               >
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4">
-                    <img 
-                      src={member.photo} 
+                    <img
+                      src={member.photo}
                       alt={member.name}
                       className="w-20 h-20 rounded-full object-cover border-4 border-orange-500/30 shadow-lg hover:scale-110 transition-transform"
                     />
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-orange-600 font-semibold text-sm mb-2">{member.role}</p>
                   <p className="text-gray-600 text-xs mb-4">{member.department}</p>
-                  
+
                   <div className="flex justify-center space-x-3">
                     {member.github && (
                       <a
