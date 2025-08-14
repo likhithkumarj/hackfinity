@@ -165,7 +165,7 @@ const OrganizingCommittee: React.FC = () => {
               },
               {
                 name: "Likhith Kumar",
-                role: "Poster Designer & Technical Coordinator",
+                role: "Website+Poster Designer & Technical Coordinator",
                 department: "AI&ML, Full Stack Intern(BTI IGNITE)",
                 photo: likhithKumarPhoto,
                 github: "https://github.com/likhithkumar",
