@@ -14,7 +14,7 @@ const FAQ: React.FC = () => {
     {
       category: "General",
       question: "What is included in the registration fee?",
-      answer: "The ₹1,499 registration fee includes: venue access for 18 hours, meals and refreshments, HACKFINITY swag kit, mentorship sessions, networking opportunities, and participation in all hackathon activities. This is a one-time fee per participant."
+      answer: "The ₹1,499 registration fee includes: venue access for 18 hours, meals and refreshments, HACKFINITY swag kit, mentorship sessions, networking opportunities, and participation in all hackathon activities. This is a one-time fee per team (maximum 3 members)."
     },
     {
       category: "General",
@@ -24,12 +24,12 @@ const FAQ: React.FC = () => {
     {
       category: "Participation",
       question: "How do I register and what does it cost?",
-      answer: "Registration is simple! Click the \"Register Now\" button on our homepage and fill out the registration form. The registration fee is ₹1,499 per participant, which includes meals, venue access, swag, and participation in all activities. Payment is processed securely through Razorpay."
+      answer: "Registration is simple! Click the \"Register Now\" button on our homepage and fill out the registration form. The registration fee is ₹1,499 per team (maximum 3 members), which includes meals, venue access, swag, and participation in all activities. Payment is processed securely through Razorpay."
     },
     {
       category: "Participation",
       question: "What is the team size limit?",
-      answer: "Teams can have a maximum of 3 members. You can register as a solo participant or with a pre-formed team. Team member 1 is automatically the team leader. Team should register and pay the ₹1,499 registration fee"
+      answer: "Teams can have a maximum of 3 members. You can register as a solo participant or with a pre-formed team. Team member 1 is automatically the team leader. Each team pays only ₹1,499 total registration fee (not per member)."
     },
     {
       category: "Participation",
