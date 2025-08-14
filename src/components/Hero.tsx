@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-white">
                 <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
-                <span className="text-sm sm:text-base">8:00 AM Start</span>
+                <span className="text-sm sm:text-base">4:00 PM Start</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2 text-white">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
