@@ -18,7 +18,7 @@ const Registration: React.FC = () => {
             and secure your spot in HACKFINITY 2025.
           </p>
           <div className="bg-orange-500/20 border border-orange-500 rounded-lg p-3 sm:p-4 inline-block mb-6 sm:mb-8 mx-4 sm:mx-0">
-            <p className="text-orange-300 font-semibold text-sm sm:text-base">Entry Fee: ₹1,499 per participant (Max 3 members per team)</p>
+            <p className="text-orange-300 font-semibold text-sm sm:text-base">Entry Fee: ₹1,499 per Team(Max 3 members per team)</p>
           </div>
         </div>
 
