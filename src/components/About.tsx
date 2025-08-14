@@ -83,7 +83,7 @@ const About: React.FC = () => {
             <div className="bg-orange-500/10 rounded-2xl p-6 sm:p-8 border border-orange-500/30 mt-6 lg:mt-0">
               <div className="text-center">
                 <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-orange-500 mb-3 sm:mb-4">₹1,499</div>
-                <div className="text-white text-lg sm:text-xl font-semibold mb-2">Entry Fee Per Participant</div>
+                <div className="text-white text-lg sm:text-xl font-semibold mb-2">Entry Fee Per Team</div>
                 <div className="text-orange-300 mb-4 sm:mb-6 text-sm sm:text-base">Includes all meals, swag, and networking opportunities</div>
                 <div className="space-y-2 sm:space-y-3 text-white text-left">
                   <div className="flex justify-between text-sm sm:text-base">
