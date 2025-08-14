@@ -204,10 +204,7 @@ const Registration: React.FC = () => {
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Complete payment of ₹1,499 within 24 hours</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Join our WhatsApp group for updates</span>
-                </li>
+
                 <li className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Prepare for the hackathon on August 22, 2025</span>

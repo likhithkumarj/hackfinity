@@ -1,13 +1,33 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Github, Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { Facebook, Instagram, Mail, Phone, MapPin, Heart, MessageCircle, Youtube, Globe } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Github className="w-5 h-5" />, href: "#", label: "GitHub" }
+    { 
+      icon: <MessageCircle className="w-5 h-5" />, 
+      href: "https://whatsapp.com/channel/0029VaxGy7HHLHQdxrN0mb1p", 
+      label: "WhatsApp Channel" 
+    },
+    { 
+      icon: <Instagram className="w-5 h-5" />, 
+      href: "https://www.instagram.com/bti_ignite_incubation_council?igsh=MWlhNGhjeTQxZ2dmbg%3D%3D&utm_source=qr", 
+      label: "Instagram" 
+    },
+    { 
+      icon: <Youtube className="w-5 h-5" />, 
+      href: "https://youtube.com/@btibangaloreincubationcentre?si=ibLeA9mFNUsZ-DhZ", 
+      label: "YouTube" 
+    },
+    { 
+      icon: <Facebook className="w-5 h-5" />, 
+      href: "https://www.facebook.com/profile.php?id=61568704182165&mibextid=LQQJ4d", 
+      label: "Facebook" 
+    },
+    { 
+      icon: <Globe className="w-5 h-5" />, 
+      href: "http://btibangalore.com", 
+      label: "Website" 
+    }
   ];
 
   const quickLinks = [
@@ -54,6 +74,8 @@ const Footer: React.FC = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-orange-500 p-3 rounded-lg transition-colors"
                   aria-label={social.label}
                 >
@@ -120,7 +142,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-orange-500" />
                 <div>
-                  <p className="text-gray-400">info@hackfinity.com</p>
+                  <p className="text-gray-400">director@btibangalore.com</p>
                   <p className="text-gray-400 text-sm">General Inquiries</p>
                 </div>
               </div>
