@@ -80,8 +80,8 @@ const FAQ: React.FC = () => {
                   setOpenIndex(null);
                 }}
                 className={`px-3 py-2 sm:px-6 sm:py-3 rounded-full font-semibold transition-all duration-300 text-xs sm:text-base ${selectedCategory === category
-                    ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
-                    : 'bg-black/50 text-gray-300 border border-orange-500/30 hover:bg-orange-500/20 hover:text-orange-300'
+                  ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
+                  : 'bg-black/50 text-gray-300 border border-orange-500/30 hover:bg-orange-500/20 hover:text-orange-300'
                   }`}
               >
                 {category}
